@@ -10,7 +10,7 @@ from datetime import datetime, timezone
 from sseclient import SSEClient
 
 # ---------------- CONFIG ----------------
-BOT_TOKEN = "8513192978:AAHWiyU4PNvf_A0RlTzBcx0qY3EyfAa1ayw"
+BOT_TOKEN = "8588283910:AAHT-tiLSUGYNoFmG-gMZNrkdJWnDCTlbS8"
 
 if not BOT_TOKEN or BOT_TOKEN.strip() == "":
     print("❌ BOT_TOKEN missing inside ra.py file!")
@@ -19,9 +19,9 @@ if not BOT_TOKEN or BOT_TOKEN.strip() == "":
 API_URL = f"https://api.telegram.org/bot{BOT_TOKEN}"
 OWNER_IDS = [1451422178, 5148880913]
 PRIMARY_ADMIN_ID = 1451422178
-POLL_INTERVAL = 2
+POLL_INTERVAL = 1
 MAX_SSE_RETRIES = 5
-MAX_FIREBASE_PER_USER = 5  # Maximum Firebase URLs per user
+MAX_FIREBASE_PER_USER = 1  # Maximum Firebase URLs per user
 # ---------------------------------------
 
 OFFSET = None
@@ -35,7 +35,7 @@ BOT_START_TIME = time.time()
 SENSITIVE_KEYS = {}
 firebase_cache = {}   # chat_id -> dict(firebase_url -> snapshot)
 cache_time = {}       # chat_id -> dict(firebase_url -> timestamp)
-CACHE_REFRESH_SECONDS = 3600  # 1 hour
+CACHE_REFRESH_SECONDS = 1600  # 1 hour
 blocked_devices = set()  # Store blocked device IDs
 used_firebase_urls = set()  # Track all Firebase URLs being used globally
 pending_permissions = {}  # user_id -> firebase_url for approval
